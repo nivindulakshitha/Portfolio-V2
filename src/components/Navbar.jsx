@@ -6,6 +6,7 @@ import { logo, menu, close } from '../assets'
 
 const Navbar = () => {
 	const [active, setActive] = useState("")
+	const [toggle, setToggle] = useState(false)
 
 	return (
 		<nav className={`
@@ -25,6 +26,24 @@ const Navbar = () => {
 					<img src={logo} alt="logo" className="h-9 w-9 object-contain" />
 					<p className='text-white text-[18px] font-bold cursor-pointer'>Nivindu <span className='sm:block hidden'>Lakshitha</span></p>
 				</Link>
+				<ul className="list-none hidden sm:flex flex-row gap-10">
+					{
+						navLinks.map(link => (
+							<li key={link.id}
+								className={`${active === link.id ? 'text-white' : 'text-secondary'} cursor-pointer hover:text-white text-[18px] font-medium`}
+								onClick={() => { setActive(link.id)}}
+							>
+								<a href={`#${link.id}`}>{ link.title }</a>
+							</li>
+						))
+					}
+				</ul>
+
+				<div className="sm:hidden flex flex-1 justify-end items-center">
+					<img src={menu} alt="menu" className='w-[28px] h-[28px] cursor-pointer object-contain'
+						onClick={() => setToggle(!toggle)}
+					/>
+				</div>
 			</div>
 		</nav>
 	)
