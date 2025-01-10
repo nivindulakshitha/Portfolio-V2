@@ -13,16 +13,18 @@ const Navbar = () => {
 			${styles.bgPrimary}
 		`}>
 			<div className="w-full flex items-center justify-between max-w-7xl mx-auto">
-				<Link 
+				<Link
 					to="/"
 					className='flex items-center gap-2'
 					onClick={() => {
 						setActive("")
 						window.scrollTo(0, 0)
 					}}
-				/>
+				>
 
-				<img src={logo} alt="logo" className="h-9 w-9 object-contain" />
+					<img src={logo} alt="logo" className="h-9 w-9 object-contain" />
+					<p className='text-white text-[18px] font-bold cursor-pointer'>Nivindu <span className='sm:block hidden'>Lakshitha</span></p>
+				</Link>
 			</div>
 		</nav>
 	)
