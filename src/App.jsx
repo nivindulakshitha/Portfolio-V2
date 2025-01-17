@@ -12,9 +12,9 @@ function App() {
 				</div>
 				<About />
 				<Tech />
+				<Projects />
 				<Works />
 				<Experience />
-				<Projects />
 				<div className="relative z-0">
 					<Contact />
 					<StarsCanvas />

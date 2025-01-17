@@ -7,16 +7,10 @@ import { gsap } from 'gsap';
 
 const Computers = ({ props }) => {
 	const groupRef = useRef();
-	let nodes = null;
-	let materials = null;
 
-	try {
-		const gltf = useGLTF('/computer/monitor.glb');
-		nodes = gltf.nodes;
-		materials = gltf.materials;
-	} catch (error) {
-		console.error("GLTF Loading Error:", error);
-	}
+	const gltf = useGLTF('/computer/monitor.glb');
+	const nodes = gltf.nodes;
+	const materials = gltf.materials;
 
 	const videoTexture = useVideoTexture('/computer/project1.mp4', {
 		loop: true,
