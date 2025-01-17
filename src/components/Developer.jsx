@@ -20,7 +20,7 @@ const Model = ({ gotCatch, isMobile, ...props }) => {
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
 	const { nodes, materials } = useGraph(clone);
 
-	const fbxAnimation = useFBX(`/models/animations/${gotCatch ? 'offence' : isMobile ? 'dancing' : 'pointing'}.fbx`);
+	const fbxAnimation = useFBX(`/models/animations/${gotCatch ? 'entry' : isMobile ? 'dancing' : 'pointing'}.fbx`);
 	fbxAnimation.animations[0].name = 'fbx';
 	cleanAnimationTrackNames(fbxAnimation.animations, 'mixamorig');
 
@@ -57,7 +57,7 @@ const Model = ({ gotCatch, isMobile, ...props }) => {
 
 useGLTF.preload('/models/nivindulakshitha.glb');
 
-const Developer = () => {
+const Developer = ({ isContactVisible = false }) => {
 	const [gotCatch, setGotCatch] = useState(false)
 	const [isMobile, setIsMobile] = useState(false);
 
@@ -65,6 +65,13 @@ const Developer = () => {
 		const mediaQuery = window.matchMedia('(max-width: 500px)');
 		setIsMobile(mediaQuery.matches);
 	}, []);
+
+	useEffect(() => {
+		if (isContactVisible) {
+			alert(isContactVisible)
+		}
+		setGotCatch(isContactVisible)
+	}, [isContactVisible])
 
 	return (
 		<div className="w-full z-0 absolute right-0 bottom-0 h-full">

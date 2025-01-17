@@ -126,6 +126,18 @@
   transform: translateZ(0);
 }
 
+.arrow-btn {
+  @apply w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full arrow-gradient;
+}
+
+.arrow-gradient {
+	background-image: linear-gradient(to right,
+			rgba(255, 255, 255, 0.1) 10%,
+			rgba(255, 255, 255, 0.000025) 50%,
+			rgba(255, 255, 255, 0.000025) 50%,
+			rgba(255, 255, 255, 0.025) 100%);
+}
+
 @keyframes mulShdSpin {
   0%,
   100% {
