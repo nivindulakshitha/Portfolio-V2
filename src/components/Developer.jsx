@@ -76,9 +76,9 @@ const Developer = () => {
 					shadow-mapSize-height={512}
 				/>
 				<Suspense fallback={<Loader />}>
-					<Model scale={1.5} position-y={gotCatch ? -1.5 : -1.3} position-x={2.5} gotCatch={gotCatch}/>
+					<Model scale={1.5} position-y={gotCatch ? -1.5 : -1.3} position-x={2.5} gotCatch={gotCatch} />
 				</Suspense>
-				<OrbitControls 
+				<OrbitControls
 					enableZoom={false}
 					enablePan={false}
 					enableRotate={false}
