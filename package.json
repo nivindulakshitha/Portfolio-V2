@@ -21,7 +21,8 @@
     "react-tilt": "^1.0.2",
     "react-title": "^1.0.0",
     "react-vertical-timeline-component": "^3.5.3",
-    "three": "^0.172.0"
+    "three": "^0.172.0",
+    "three-stdlib": "^2.35.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
