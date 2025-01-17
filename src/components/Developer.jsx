@@ -67,9 +67,6 @@ const Developer = ({ isContactVisible = false }) => {
 	}, []);
 
 	useEffect(() => {
-		if (isContactVisible) {
-			alert(isContactVisible)
-		}
 		setGotCatch(isContactVisible)
 	}, [isContactVisible])
 
