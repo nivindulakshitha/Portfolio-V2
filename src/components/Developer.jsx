@@ -65,7 +65,7 @@ const Developer = () => {
 			<Canvas
 				camera={{ position: [550, 10, 500], fov: gotCatch ? 10 : 8 }}
 				shadows
-				gl={{ antialias: true, powerPreference: 'low-power', alpha: true }}
+				gl={{ antialias: true, preserveDrawingBuffer: true, powerPreference: 'low-power', alpha: true }}
 			>
 				<ambientLight intensity={2.3} />
 				<directionalLight
