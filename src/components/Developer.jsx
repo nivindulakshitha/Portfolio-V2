@@ -20,7 +20,7 @@ const Model = ({ gotCatch, isMobile, ...props }) => {
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
 	const { nodes, materials } = useGraph(clone);
 
-	const fbxAnimation = useFBX(`/models/animations/${gotCatch ? 'offence' : isMobile ? 'dancing' : 'pointing'}.fbx`);
+	const fbxAnimation = useFBX(`/models/animations/${gotCatch ? 'entry' : isMobile ? 'dancing' : 'pointing'}.fbx`);
 	fbxAnimation.animations[0].name = 'fbx';
 	cleanAnimationTrackNames(fbxAnimation.animations, 'mixamorig');
 

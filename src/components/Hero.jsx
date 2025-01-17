@@ -13,9 +13,9 @@ const Hero = () => {
 				</div>
 
 				<div>
-					<h1 className={`${styles.heroHeadText}`}>Hi, I&apos;m <span className='text-[#915EFF]'>Nivindu</span></h1>
+					<h1 className={`${styles.heroHeadText}`}>Hi, I&apos;m <span className='text-[#915EFF]'>Lakshitha</span></h1>
 					<p className={`${styles.heroSubText} mt-2 text-white-100 `}>
-						I develop 3D visuals, user interfaces, <br className='sm:block hidden' /> and web applications.
+						I develop Full Stack solutions, <br className='sm:block hidden' /> even user interfaces with 3D visuals!
 					</p>
 				</div>
 			</div>
