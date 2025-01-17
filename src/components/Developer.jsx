@@ -4,7 +4,7 @@ import React, { Suspense, useEffect, useRef, useState } from 'react';
 import Loader from './Loader';
 import { SkeletonUtils } from 'three-stdlib';
 
-const Model = ({ gotCatch, ...props }) => {
+const Model = ({ gotCatch, isMobile, ...props }) => {
 	const modelGroup = useRef();
 	const cleanAnimationTrackNames = (animations, prefixToRemove) => {
 		animations.forEach((animation) => {
@@ -20,7 +20,7 @@ const Model = ({ gotCatch, ...props }) => {
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
 	const { nodes, materials } = useGraph(clone);
 
-	const fbxAnimation = useFBX(`/models/animations/${gotCatch ? 'offence' : 'pointing'}.fbx`);
+	const fbxAnimation = useFBX(`/models/animations/${gotCatch ? 'offence' : isMobile ? 'dancing' : 'pointing'}.fbx`);
 	fbxAnimation.animations[0].name = 'fbx';
 	cleanAnimationTrackNames(fbxAnimation.animations, 'mixamorig');
 
@@ -59,11 +59,17 @@ useGLTF.preload('/models/nivindulakshitha.glb');
 
 const Developer = () => {
 	const [gotCatch, setGotCatch] = useState(false)
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const mediaQuery = window.matchMedia('(max-width: 500px)');
+		setIsMobile(mediaQuery.matches);
+	}, []);
 
 	return (
 		<div className="w-full z-0 absolute right-0 bottom-0 h-full">
 			<Canvas
-				camera={{ position: [550, 10, 500], fov: gotCatch ? 10 : 8 }}
+				camera={{ position: [isMobile ? 50 : 550, 10, 500], fov: gotCatch ? 10 : 8 }}
 				shadows
 				gl={{ antialias: true, preserveDrawingBuffer: true, powerPreference: 'low-power', alpha: true }}
 			>
@@ -76,7 +82,7 @@ const Developer = () => {
 					shadow-mapSize-height={512}
 				/>
 				<Suspense fallback={<Loader />}>
-					<Model scale={1.5} position-y={gotCatch ? -1.5 : -1.3} position-x={2.5} gotCatch={gotCatch} />
+					<Model scale={isMobile ? 0.8 : 1.3} position-y={gotCatch ? -1.5 : -1.2} position-x={isMobile ? 0 : 2.5} gotCatch={gotCatch} isMobile={isMobile} />
 				</Suspense>
 				<OrbitControls
 					enableZoom={false}
