@@ -1,23 +1,34 @@
-/* eslint-disable react/no-unknown-property */
 import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import { OrbitControls, Preload, useGLTF, useVideoTexture } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 import { Environment } from '@react-three/drei';
 import { gsap } from 'gsap';
 
-const Computers = ({ isMobile, props }) => {
-	const groupRef = useRef(); // Reference for GSAP animation
-	const { nodes, materials } = useGLTF('/computer/monitor.glb');
+const Computers = ({ props }) => {
+	const groupRef = useRef();
+	let nodes = null;
+	let materials = null;
 
-	// Optional: Enhance material dynamically if possible
-	if (materials.Base) {
-		materials.Base.roughness = 0.5; // Lower roughness for a shinier surface
-		materials.Base.metalness = 1; // Higher metalness for reflectivity
+	try {
+		const gltf = useGLTF('/computer/monitor.glb');
+		nodes = gltf.nodes;
+		materials = gltf.materials;
+	} catch (error) {
+		console.error("GLTF Loading Error:", error);
 	}
-	if (materials.Display) {
-		materials.Display.emissiveIntensity = 1; // Make the display more vivid
-	}
+
+	const videoTexture = useVideoTexture('/computer/project1.mp4', {
+		loop: true,
+		autoplay: true,
+		muted: true,
+	});
+
+	useEffect(() => {
+		if (materials?.Base) {
+			materials.Base.roughness = 0.7; // Lower values make it shinier
+		}
+	}, [materials]);
 
 	useEffect(() => {
 		if (groupRef.current) {
@@ -26,19 +37,21 @@ const Computers = ({ isMobile, props }) => {
 				duration: 3,
 				repeat: -1,
 				yoyo: true,
-				ease: "power1.inOut",
+				ease: 'power1.inOut',
 			});
 		}
 	}, []);
 
-	return (
+	return nodes && materials ? (
 		<group ref={groupRef} {...props} dispose={null}>
 			<group scale={0.1}>
-				<mesh
-					geometry={nodes.Screen_Display_0.geometry}
-					material={materials.Display}
-					scale={100}
-				/>
+				<mesh geometry={nodes.Screen_Display_0.geometry} scale={100}>
+					<meshStandardMaterial
+						map={videoTexture}
+						emissiveMap={videoTexture}
+						emissiveIntensity={0.5} // Add emissive glow to enhance visibility
+					/>
+				</mesh>
 				<mesh
 					castShadow
 					receiveShadow
@@ -49,7 +62,7 @@ const Computers = ({ isMobile, props }) => {
 				/>
 			</group>
 		</group>
-	);
+	) : null;
 };
 
 useGLTF.preload('/computer/monitor.glb');
@@ -74,26 +87,19 @@ const ComputerCanvas = () => {
 
 	return (
 		<Canvas
-			className="w-full h-full absolute min-w-full min-h-full"
+			className="w-full h-full absolute min-w-full min-h-full pointer-events-none"
 			frameloop="always"
 			shadows
 			camera={{ position: [20, 3, 65], fov: 7 }}
 			gl={{ preserveDrawingBuffer: true }}
 		>
-			<ambientLight intensity={0.8} />
-			<directionalLight position={[5, 10, 5]} intensity={2} castShadow />
-			<pointLight position={[-10, 10, -10]} intensity={5} />
+			<ambientLight intensity={0.2} />
+			<pointLight position={[-10, 10, -10]} intensity={10} />
 
 			<Suspense fallback={<CanvasLoader />}>
-				<Environment preset="warehouse" intensity={2} />
+				<Environment preset="warehouse" intensity={0} />
 				<OrbitControls
-					enablePan={true}
-					enableZoom={true}
-					enableDamping
-					dampingFactor={0.2}
-					rotateSpeed={-0.5}
-					maxPolarAngle={Math.PI / 2}
-					minPolarAngle={Math.PI / 2}
+					enabled={false} // Disable user interaction
 				/>
 				<Computers />
 			</Suspense>

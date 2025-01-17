@@ -38,7 +38,7 @@ const Projects = () => {
                             {currentProject.desc}
                         </p>
                         <p className="animatedText">
-                            {currentProject.subdesc}
+                            {currentProject?.subdesc}
                         </p>
                     </div>
 
@@ -55,16 +55,16 @@ const Projects = () => {
 
                         <a href={currentProject.href} target='_blank' rel='noreferrer' className='flex items-center cursor-pointer text-white-600 gap-2'>
                             <p>Check Live Site</p>
-                            <img src="/assets/arrow-up.png" alt="visit" className='w-3 h-3' />
+                            <img src="/projects/arrow-up.png" alt="visit" className='w-3 h-3' />
                         </a>
                     </div>
 
                     <div className="flex justify-between items-center mt-7">
                         <button className="arrow-btn cursor-pointer" onClick={() => handleNavigation("previous")}>
-                            <img src="/assets/left-arrow.png" alt="left-arrow" className='w-4 h-4' />
+                            <img src="/projects/left-arrow.png" alt="left-arrow" className='w-4 h-4' />
                         </button>
                         <button className="arrow-btn cursor-pointer" onClick={() => handleNavigation("next")}>
-                            <img src="/assets/right-arrow.png" alt="right-arrow" className='w-4 h-4' />
+                            <img src="/projects/right-arrow.png" alt="right-arrow" className='w-4 h-4' />
                         </button>
                     </div>
                 </div>
