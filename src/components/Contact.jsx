@@ -1,10 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import {motion} from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import { styles } from '../styles'
 import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
+
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
 const Contact = () => {
 	const formRef = useRef()
@@ -25,21 +29,25 @@ const Contact = () => {
 		e.preventDefault();
 		setLoading(true);
 
-		emailjs.send('service_3bncnz9', 'template_riosk7t', {
+		emailjs.send(SERVICE_ID, TEMPLATE_ID, {
 			from: form.name,
 			to: 'Nivindu Lakshitha',
 			from_email: form.email,
 			to_email: 'nivindulakshitha@gmail.com',
 			message: form.message
 		},
-		'O21cL1VZ5v6FSk0lO').then(() => {
+		PUBLIC_KEY).then(() => {
 			setLoading(false);
 			alert("Thank you. I will get back to you as soon as possible.")
 			setForm({
 				message: ''
 			})
-		}).catch(error => {
+		}).catch(() => {
 			alert("Something went wrong! Try again.")
+			setForm({
+				message: ''
+			})
+			setLoading(false)
 		})
 	}
 
