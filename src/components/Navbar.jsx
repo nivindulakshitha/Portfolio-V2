@@ -23,7 +23,7 @@ const Navbar = () => {
 					}}
 				>
 
-					<img src={logo} alt="logo" className="h-9 w-9 object-contain" />
+					<img src={"https://avatars.githubusercontent.com/u/88942532?v=4"} alt="logo" className="h-9 w-9 object-contain rounded-full" />
 					<p className='text-white text-[18px] font-bold cursor-pointer flex'>Nivindu &nbsp;<span className='sm:block hidden'>Lakshitha</span></p>
 				</Link>
 				<ul className="list-none hidden sm:flex flex-row gap-10">

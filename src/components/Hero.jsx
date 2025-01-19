@@ -5,6 +5,12 @@ import { useEffect, useState } from 'react';
 
 const Hero = () => {
 	const [isContactVisible, setIsContactVisible] = useState(false);
+	const [isMobile, setIsMobile] = useState(true);
+
+	useEffect(() => {
+		const mediaQuery = window.matchMedia('(max-width: 500px)');
+		setIsMobile(mediaQuery.matches);
+	}, []);
 
 	useEffect(() => {
 		const contactSection = document.querySelector('#contact');
@@ -27,7 +33,7 @@ const Hero = () => {
 	}, []);
 
 	return (
-		
+
 		<section className="relative w-full h-screen mx-auto">
 			<Developer isContactVisible={isContactVisible} />
 			<div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
@@ -43,6 +49,13 @@ const Hero = () => {
 					<p className={`${styles.heroSubText} mt-2 text-white-100`}>
 						I develop Full Stack solutions and <br className="sm:block hidden" /> user interfaces with 3D visuals!
 					</p>
+					{
+						!isMobile && (
+							<p className={`text-md mt-2 text-justify max-w-[500px] text-secondary`}>
+								a passionate software developer and technology enthusiast pursuing my degree at the Faculty of Technology, University of Sri Jayewardenepura. I specialize in JavaScript, Node.js, Express, and MongoDB, with a strong focus on building efficient and scalable web applications.
+							</p>
+						)
+					}
 				</div>
 			</div>
 
