@@ -15,11 +15,13 @@ const Developer = ({ isContactVisible = false }) => {
     }, []);
 
     useEffect(() => {
-        setGotCatch(isContactVisible);
+        if (isContactVisible) {
+			setGotCatch(true);
+		}
     }, [isContactVisible]);
 
     return (
-        <div className="w-full z-0 absolute right-0 bottom-0 h-full">
+        <div className="w-full z-10 absolute right-0 bottom-0 h-full">
             <Canvas
                 camera={{ position: [isMobile ? 50 : 550, 10, 500], fov: gotCatch ? 10 : 8 }}
                 shadows
@@ -35,9 +37,9 @@ const Developer = ({ isContactVisible = false }) => {
                 />
                 <Suspense fallback={<Loader />}>
                     <Model
-                        scale={isMobile ? 0.8 : gotCatch ? 1.2 : 1.3}
+                        scale={isMobile ? 0.8 : gotCatch ? 1 : 1.3}
                         position-y={gotCatch ? (isMobile ? -1.5 : -1) : -1.2}
-                        position-x={isMobile ? 0 : 2.5}
+                        position-x={isMobile ? 0 : gotCatch ? 1.3 : 2.5}
                         gotCatch={gotCatch}
                         isMobile={isMobile}
                     />
