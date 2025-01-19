@@ -13,7 +13,7 @@ function App() {
 				<About />
 				<Tech />
 				<Projects />
-				<Works />
+				{/* <Works /> */}
 				<Experience />
 				<div className="relative z-0">
 					<Contact />
