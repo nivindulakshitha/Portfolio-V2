@@ -5,7 +5,7 @@ import CanvasLoader from '../Loader';
 import { Environment } from '@react-three/drei';
 import { gsap } from 'gsap';
 
-const Computers = ({ props }) => {
+const Computers = ({ project, props }) => {
 	const groupRef = useRef();
 
 	const gltf = useGLTF('/computer/monitor.glb');
@@ -36,8 +36,21 @@ const Computers = ({ props }) => {
 		}
 	}, []);
 
+	useEffect(() => {
+		console.log(project)
+		if (groupRef.current) {
+			gsap.to(groupRef.current.rotation, {
+				y: Math.PI * 2,
+				duration: 1,
+				repeat: 0,  // Changed from 1 to 0
+				yoyo: false,
+				ease: 'power1.inOut',
+			});
+		}
+	}, [project])
+
 	return nodes && materials ? (
-		<group ref={groupRef} {...props} dispose={null}>
+		<group ref={groupRef} {...props} position-y={0.5} dispose={null}>
 			<group scale={0.1}>
 				<mesh geometry={nodes.Screen_Display_0.geometry} scale={100}>
 					<meshStandardMaterial
@@ -61,7 +74,7 @@ const Computers = ({ props }) => {
 
 useGLTF.preload('/computer/monitor.glb');
 
-const ComputerCanvas = () => {
+const ComputerCanvas = ({project}) => {
 	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
@@ -95,7 +108,7 @@ const ComputerCanvas = () => {
 				<OrbitControls
 					enabled={false} // Disable user interaction
 				/>
-				<Computers />
+				<Computers project={project} />
 			</Suspense>
 			<Preload all />
 		</Canvas>
