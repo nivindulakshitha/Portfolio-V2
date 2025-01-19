@@ -21,7 +21,7 @@ const Developer = ({ isContactVisible = false }) => {
     }, [isContactVisible]);
 
     return (
-        <div className="w-full z-0 absolute right-0 bottom-0 h-full">
+        <div className="w-full z-10 absolute right-0 bottom-0 h-full">
             <Canvas
                 camera={{ position: [isMobile ? 50 : 550, 10, 500], fov: gotCatch ? 10 : 8 }}
                 shadows
