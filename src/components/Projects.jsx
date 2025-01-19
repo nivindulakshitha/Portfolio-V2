@@ -32,7 +32,7 @@ const Projects = () => {
             </motion.div>
             <section className="c-space my-5">
                 <div className='grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full'>
-                    <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5">
+                    <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 order-2 lg:order-1">
                         <div className='absolute top-0 right-0'>
                             <img src={currentProject.spotlight} alt="spotlight" className='w-full h-96 object-cover rounded-xl' />
                         </div>
@@ -41,7 +41,7 @@ const Projects = () => {
                             <img src={currentProject.logo} alt="logo" className='w-10 h-10 shadow-sm' />
                         </div>
                         <div className="flex flex-col gap-5 text-white-600 my-5">
-                            <p className='text-white font-semibold text-2xl animatedText'>{currentProject.title}</p>
+                            <p className='text-white font-semibold text-2xl animatedText truncate'>{currentProject.title}</p>
 
                             {
                                 !isMobile && (
@@ -85,8 +85,9 @@ const Projects = () => {
                     </div>
 
 
-                    <div className=" bg-primary rounded-lg h-96 md:h-full">
-                        <ComputersCanvas />
+                    <div className="bg-primary rounded-lg h-96 md:h-full order-1 lg:order-2 flex">
+                       <div className='w-full h-full pointer-events-none' />
+                        <ComputersCanvas project={myProjects[selectedProjectIndex]} />
                     </div>
                 </div >
             </section >
