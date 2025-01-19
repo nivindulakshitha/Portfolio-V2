@@ -6,7 +6,6 @@ import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
 
-
 const Contact = () => {
 	const formRef = useRef()
 	const [form, setForm] = useState({
@@ -17,10 +16,32 @@ const Contact = () => {
 	const [loading, setLoading] = useState(false)
 
 	const handleChange = (e) => {
+		const {name, value} = e.target;
 
+		setForm({...form, [name]:value})
 	}
 
-	const handleSubmit = () => {}
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setLoading(true);
+
+		emailjs.send('service_3bncnz9', 'template_riosk7t', {
+			from: form.name,
+			to: 'Nivindu Lakshitha',
+			from_email: form.email,
+			to_email: 'nivindulakshitha@gmail.com',
+			message: form.message
+		},
+		'O21cL1VZ5v6FSk0lO').then(() => {
+			setLoading(false);
+			alert("Thank you. I will get back to you as soon as possible.")
+			setForm({
+				message: ''
+			})
+		}).catch(error => {
+			alert("Something went wrong! Try again.")
+		})
+	}
 
 	return (
 		<div id='contact' className="flex flex-col-reverse gap-10 xl:mt-12 xl:flex-row overflow-hidden">
@@ -30,7 +51,7 @@ const Contact = () => {
 			>
 				<p className={styles.sectionSubText}>Get in touch</p>
 				<h3 className={styles.sectionHeadText}>Contact.</h3>
-				<form action="POST" ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
+				<form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
 					<label className='flex flex-col'>
 						<span className='text-white font-medium mb-4'>Your Name</span>
 						<input type='text' value={form.name} name='name' onChange={handleChange} placeholder="What's your name?" className='bg-tertiary py-4 px-6 placeholder:text-secondary rounded-lg outline-none border-none font-medium'/>
