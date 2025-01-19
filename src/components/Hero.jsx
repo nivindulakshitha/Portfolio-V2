@@ -27,6 +27,7 @@ const Hero = () => {
 	}, []);
 
 	return (
+		
 		<section className="relative w-full h-screen mx-auto">
 			<Developer isContactVisible={isContactVisible} />
 			<div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
@@ -40,7 +41,7 @@ const Hero = () => {
 						Hi, I&apos;m <span className="text-[#915EFF]">Lakshitha</span>
 					</h1>
 					<p className={`${styles.heroSubText} mt-2 text-white-100`}>
-						I develop Full Stack solutions, <br className="sm:block hidden" /> even user interfaces with 3D visuals!
+						I develop Full Stack solutions and <br className="sm:block hidden" /> user interfaces with 3D visuals!
 					</p>
 				</div>
 			</div>
