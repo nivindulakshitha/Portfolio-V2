@@ -43,7 +43,6 @@ const Computers = ({ project, props }) => {
 	}, []);
 
 	useEffect(() => {
-		console.log(project)
 		if (groupRef.current) {
 			gsap.to(groupRef.current.rotation, {
 				y: Math.PI * 2,
