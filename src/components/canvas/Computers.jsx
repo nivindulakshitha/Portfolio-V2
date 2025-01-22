@@ -6,21 +6,27 @@ import { Environment } from '@react-three/drei';
 import { gsap } from 'gsap';
 
 const Computers = ({ project, props }) => {
+	const ROTATION_SPEED = 1;
+	const [texture, setTexture] = useState('/computer/project1.mp4')
 	const groupRef = useRef();
 
 	const gltf = useGLTF('/computer/monitor.glb');
 	const nodes = gltf.nodes;
 	const materials = gltf.materials;
 
-	const videoTexture = useVideoTexture('/computer/project1.mp4', {
+	const videoTexture = useVideoTexture(texture, {
 		loop: true,
 		autoplay: true,
 		muted: true,
 	});
 
+	setTimeout(() => {
+		setTexture(project.texture)
+	}, (ROTATION_SPEED * 1000) / 2)
+
 	useEffect(() => {
 		if (materials?.Base) {
-			materials.Base.roughness = 0.7; // Lower values make it shinier
+			materials.Base.roughness = 0.7;
 		}
 	}, [materials]);
 
@@ -41,7 +47,7 @@ const Computers = ({ project, props }) => {
 		if (groupRef.current) {
 			gsap.to(groupRef.current.rotation, {
 				y: Math.PI * 2,
-				duration: 1,
+				duration: ROTATION_SPEED,
 				repeat: 0,  // Changed from 1 to 0
 				yoyo: false,
 				ease: 'power1.inOut',
