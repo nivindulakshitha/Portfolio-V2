@@ -138,6 +138,10 @@
 			rgba(255, 255, 255, 0.025) 100%);
 }
 
+.loading-text {
+  @apply md:text-7xl sm:text-6xl text-4xl font-bold mt-5 whitespace-nowrap;
+}
+
 @keyframes mulShdSpin {
   0%,
   100% {
