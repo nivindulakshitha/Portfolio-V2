@@ -46,7 +46,7 @@ export const navLinks = [
 	}
 	,
 	{
-		id: "",
+		id: "cv",
 		title: "My CV",
 	},
 ];

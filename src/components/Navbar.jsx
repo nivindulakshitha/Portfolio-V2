@@ -44,7 +44,13 @@ const Navbar = () => {
 								className={`${active === link.id ? 'text-white' : 'text-secondary'} whitespace-nowrap cursor-pointer hover:text-white text-[18px] font-medium`}
 								onClick={() => { setActive(link.id) }}
 							>
-								<a href={`#${link.id}`}>{link.title}</a>
+								{
+									link.id === 'cv' ? (
+										<a href="./Nivindu Lakshitha CV.pdf" target="_blank">{link.title}</a>
+									) : (
+										<a href={`#${link.id}`}>{link.title}</a>
+									)
+								}
 							</li>
 						))
 					}
@@ -71,7 +77,13 @@ const Navbar = () => {
 										setToggle(!toggle);
 									}}
 								>
-									<a href={`#${link.id}`}>{link.title}</a>
+									{
+										link.id === 'cv' ? (
+											<a href="./Nivindu Lakshitha CV.pdf" target="_blank">{link.title}</a>
+										) : (
+											<a href={`#${link.id}`}>{link.title}</a>
+										)
+									}
 								</li>
 							))}
 						</ul>
