@@ -2,6 +2,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { About, Contact, Experience, Hero, Navbar, Tech, StarsCanvas, Projects, Loading } from './components'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import TipsAssistant from './components/Tips'
 
 function App() {
 	const [doneLoading, setDoneLoading] = useState(false)
@@ -28,6 +29,7 @@ function App() {
 					<Hero />
 				</div>
 				<About />
+				{/* <TipsAssistant /> */}
 				<Experience />
 				<Tech />
 				<Projects />
