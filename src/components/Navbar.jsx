@@ -35,7 +35,7 @@ const Navbar = () => {
 					{
 						navLinks.map(link => (
 							<li key={link.id}
-								className={`${active === link.id ? 'text-white' : 'text-secondary'} cursor-pointer hover:text-white text-[18px] font-medium`}
+								className={`${active === link.id ? 'text-white' : 'text-secondary'} whitespace-nowrap cursor-pointer hover:text-white text-[18px] font-medium`}
 								onClick={() => { setActive(link.id) }}
 							>
 								<a href={`#${link.id}`}>{link.title}</a>
@@ -49,7 +49,7 @@ const Navbar = () => {
 						onClick={() => setToggle(!toggle)}
 					/>
 
-					<div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl `}>
+					<div className={`${!toggle ? 'hidden' : 'flex'} p-6 blue-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl `}>
 						<ul className="list-none flex sm:hidden justify-end items-start flex-col gap-4">
 							{
 								navLinks.map(link => (

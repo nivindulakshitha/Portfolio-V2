@@ -31,21 +31,25 @@ export const navLinks = [
 		title: "About",
 	},
 	{
+		id: "milestones",
+		title: "Milestones",
+	},
+	{
 		id: "technoloies",
 		title: "Technologies",
 	},
 	{
 		id: "projects",
 		title: "Projects",
-	}
-	,
-	{
-		id: "milestones",
-		title: "Milestones",
-	},
+	},	
 	{
 		id: "contact",
 		title: "Contact",
+	}
+	,
+	{
+		id: "cv",
+		title: "My CV",
 	},
 ];
 
@@ -140,9 +144,8 @@ const experiences = [
 		date: "Augest 2021 - Current",
 		points: [
 			"60+ open source projects contributed",
-			"70 stargazers earned",
-			"2500+ contributions",
-			"5 total issues created"
+			"130 stargazers earned",
+			"2500+ contributions"
 		],
 	},
 	{
