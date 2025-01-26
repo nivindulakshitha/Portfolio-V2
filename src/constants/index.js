@@ -15,14 +15,12 @@ import {
 	git,
 	figma,
 	docker,
-	meta,
-	starbucks,
-	tesla,
-	shopify,
-	carrent,
-	jobit,
-	tripguide,
 	threejs,
+	github,
+	usjp,
+	boc,
+	usv,
+	pcc
 } from "../assets";
 
 export const navLinks = [
@@ -48,7 +46,7 @@ export const navLinks = [
 	}
 	,
 	{
-		id: "cv",
+		id: "",
 		title: "My CV",
 	},
 ];
@@ -131,7 +129,7 @@ const experiences = [
 	{
 		title: "Undergraduate",
 		company_name: "Univevrity of Sri Jayewardenepura",
-		icon: starbucks,
+		icon: usjp,
 		iconBg: "#383E56",
 		date: "October 2021 - Current",
 		points: [],
@@ -139,7 +137,7 @@ const experiences = [
 	{
 		title: "Open Source Contributor",
 		company_name: "GitHub",
-		icon: starbucks,
+		icon: github,
 		iconBg: "#383E56",
 		date: "Augest 2021 - Current",
 		points: [
@@ -151,15 +149,15 @@ const experiences = [
 	{
 		title: "Trainee",
 		company_name: "Bank of Ceylon",
-		icon: tesla,
-		iconBg: "#E6DEDD",
+		icon: boc,
+		iconBg: "#383E56",
 		date: "Jan 2021 - Feb 2022",
 		points: [],
 	},
 	{
 		title: "Student",
 		company_name: "Udabalawala College of Kurunegala",
-		icon: shopify,
+		icon: usv,
 		iconBg: "#383E56",
 		date: "Jan 2022 - Jan 2023",
 		points: [],
@@ -167,80 +165,14 @@ const experiences = [
 	{
 		title: "Student",
 		company_name: "Pimburuwellegama Collage of Kurunegala",
-		icon: meta,
-		iconBg: "#E6DEDD",
+		icon: pcc,
+		iconBg: "#383E56", // light - E6DEDD
 		date: "Jan 2023 - Present",
 		points: [],
 	},
 ];
 
 const projects = [
-	{
-		name: "Car Rent",
-		description:
-			"Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-		tags: [
-			{
-				name: "react",
-				color: "blue-text-gradient",
-			},
-			{
-				name: "mongodb",
-				color: "green-text-gradient",
-			},
-			{
-				name: "tailwind",
-				color: "pink-text-gradient",
-			},
-		],
-		image: carrent,
-		source_code_link: "https://github.com/",
-	},
-	{
-		name: "Job IT",
-		description:
-			"Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-		tags: [
-			{
-				name: "react",
-				color: "blue-text-gradient",
-			},
-			{
-				name: "restapi",
-				color: "green-text-gradient",
-			},
-			{
-				name: "scss",
-				color: "pink-text-gradient",
-			},
-		],
-		image: jobit,
-		source_code_link: "https://github.com/",
-	},
-	{
-		name: "Trip Guide",
-		description:
-			"A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-		tags: [
-			{
-				name: "nextjs",
-				color: "blue-text-gradient",
-			},
-			{
-				name: "supabase",
-				color: "green-text-gradient",
-			},
-			{
-				name: "css",
-				color: "pink-text-gradient",
-			},
-		],
-		image: tripguide,
-		source_code_link: "https://github.com/",
-	},
-];
-
-const myProjects = [
 	{
 		title: 'Podcastr - AI Podcast Platform',
 		desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
@@ -420,4 +352,4 @@ const myProjects = [
 	},
 ];
 
-export { services, technologies, experiences, projects, myProjects };
+export { services, technologies, experiences, projects };
