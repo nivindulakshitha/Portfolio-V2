@@ -188,7 +188,7 @@ const experiences = [
 
 const projects = [
 	{
-		title: 'Readme API - Show your top 10 collaborators ndjfdjd dfkjdndfnidfjdf dfndif',
+		title: 'Readme API - Show your top 10 collaborators',
 		desc: 'Developed a customizable API to generate contributor images for GitHub profile README files, showcasing the top 10 contributors in an engaging way.',
 		href: 'https://github.com/nivindulakshitha/My-Contributors',
 		texture: '/computer/contributors.mp4',
