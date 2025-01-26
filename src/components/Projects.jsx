@@ -34,14 +34,18 @@ const Projects = () => {
                 <div className='grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full'>
                     <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 order-2 lg:order-1">
                         <div className='absolute top-0 right-0'>
-                            <img src={currentProject.spotlight} alt="spotlight" className='w-full h-96 object-cover rounded-xl' />
+                            <img src={currentProject.spotlight ? currentProject.spotlight : "projects/lights/spotlight2.png"} alt="spotlight" className='w-full h-96 object-cover rounded-xl' />
                         </div>
 
-                        <div className='p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg' style={currentProject.logoStyle}>
-                            <img src={currentProject.logo} alt="logo" className='w-10 h-10 shadow-sm' />
-                        </div>
+                        {
+                            currentProject.logo && (
+                                <div className='p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg' style={currentProject.logoStyle}>
+                                    <img src={currentProject.logo} alt="logo" className='w-10 h-10 shadow-sm' />
+                                </div>
+                            )
+                        }
                         <div className="flex flex-col gap-5 text-white-600 my-5">
-                            <p className='text-white font-semibold text-2xl animatedText truncate'>{currentProject.title}</p>
+                            <p className='text-white font-semibold text-2xl animatedText line-clamp-2'>{currentProject.title}</p>
 
                             {
                                 !isMobile && (
@@ -58,6 +62,7 @@ const Projects = () => {
                         </div>
 
                         <div className="flex items-center jsutify-between flex-wrap gap-5">
+                            <img src={currentProject.techs_url} alt="tech stack" />
                             <div className="flex items-center gap-3">
                                 {currentProject.tags.map((tag, index) => {
                                     return (
@@ -67,7 +72,6 @@ const Projects = () => {
                                     )
                                 })}
                             </div>
-
                             <a href={currentProject.href} target='_blank' rel='noreferrer' className='flex items-center cursor-pointer text-white-600 gap-2'>
                                 <p>Check on GitHub</p>
                                 <img src="/projects/arrow-up.png" alt="visit" className='w-3 h-3' />
