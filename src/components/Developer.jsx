@@ -27,10 +27,10 @@ const Developer = ({ isContactVisible = false }) => {
                 shadows
                 gl={{ antialias: true, preserveDrawingBuffer: true, powerPreference: 'low-power', alpha: true }}
             >
-                <ambientLight intensity={2.3} />
+                <ambientLight intensity={2} />
                 <directionalLight
                     position={[5, 10, 5]}
-                    intensity={0.8}
+                    intensity={0.5}
                     castShadow
                     shadow-mapSize-width={512}
                     shadow-mapSize-height={512}
@@ -38,7 +38,7 @@ const Developer = ({ isContactVisible = false }) => {
                 <Suspense fallback={<Loader />}>
                     <Model
                         scale={isMobile ? 0.8 : gotCatch ? 1 : 1.3}
-                        position-y={gotCatch ? (isMobile ? -1.3 : -1) : -1.2}
+                        position-y={gotCatch ? (isMobile ? -1.3 : -1) : -1.1}
                         position-x={isMobile ? 0 : gotCatch ? 1.5 : 2.5}
                         gotCatch={gotCatch}
                         isMobile={isMobile}

@@ -1,7 +1,5 @@
 import { BrowserRouter } from 'react-router-dom'
-import { About, Contact, Experience, Hero, Navbar, Tech, StarsCanvas } from './components'
-import Projects from './components/Projects'
-import Loading from './components/Loading'
+import { About, Contact, Experience, Hero, Navbar, Tech, StarsCanvas, Projects, Loading } from './components'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
