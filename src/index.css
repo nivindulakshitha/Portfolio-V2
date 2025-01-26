@@ -139,7 +139,7 @@
 }
 
 .loading-text {
-  @apply md:text-7xl sm:text-6xl text-4xl font-bold mt-5 whitespace-nowrap;
+  @apply md:text-7xl sm:text-6xl xs:text-5xl text-4xl font-bold mt-5 whitespace-nowrap;
 }
 
 @keyframes mulShdSpin {
