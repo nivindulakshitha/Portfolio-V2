@@ -71,7 +71,7 @@ const Loading = ({ setDoneLoading }) => {
 			animate="visible"
 		>
 			<div className="flex flex-col justify-center h-screen sm:me-0 md:me-[250px] xl:me-[275px] items-center z-10">
-				{['a bit d!fferent', 'can make a', '<span class="underline">profound</span> impact.'].map(
+				{['"a bit d!fferent', 'can make a', '<span class="underline">profound</span> impact."'].map(
 					(text, index) => (
 						<motion.p
 							key={index}
@@ -83,7 +83,7 @@ const Loading = ({ setDoneLoading }) => {
 					)
 				)}
 				<motion.p
-					className="mt-20 text-xl color-[#F1F1F1] font-bold pl-3"
+					className="mt-20 md:text-md text-sm color-[#F1F1F1] font-bold pl-3"
 					variants={progressVariants}
 				>
 					{progress >= 100 ? (

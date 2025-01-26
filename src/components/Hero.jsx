@@ -47,12 +47,12 @@ const Hero = () => {
 						Hi, I&apos;m <span className="text-[#915EFF]">Lakshitha</span>
 					</h1>
 					<p className={`${styles.heroSubText} mt-2 text-white-100`}>
-						I develop Full Stack solutions and <br className="sm:block hidden" /> user interfaces with 3D visuals!
+						Building Full Stack solutions with a focus on <br className="sm:block hidden" /> problem-solving and teamwork!
 					</p>
 					{
 						!isMobile && (
 							<p className={`text-md mt-2 text-justify max-w-[500px] text-secondary`}>
-								a passionate software developer and technology enthusiast pursuing my degree at the Faculty of Technology, University of Sri Jayewardenepura. I specialize in JavaScript, Node.js, Express, and MongoDB, with a strong focus on building efficient and scalable web applications.
+								My projects reflect a high level of proficiency in leveraging modern tools and technologies such as React, Ballerina, MongoDB, Python and Docker to build scalable and impactful solutions.
 							</p>
 						)
 					}
