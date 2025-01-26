@@ -100,7 +100,7 @@ const Loading = ({ setDoneLoading }) => {
 				</motion.p>
 				<motion.div className="max-w-[450px] bg-secondary bg-opacity-10 rounded-xl text-center mt-20 p-3" variants={progressVariants}>
 					<p className="text-white text-[14px] cursor-pointer flex">
-						Note: 3D models use browser&apos;s WebGL API and device GPU processor to render the model. It may take a while to load and it may freeze the browser for a while in some cases. Please be patient. It is recommended to view this website on a desktop or laptop for the best experience.
+						3D models on this website utilize the browser&apos;s WebGL API and your device&apos;s GPU to render. Loading may take some time, and in certain cases, it might temporarily freeze the browser. I recommend viewing this website on a desktop or laptop for the best experience. Thank you for your patience.
 					</p>
 				</motion.div>
 			</div>
