@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { styles } from '../styles'
 import { navLinks } from '../constants'
-import { logo, menu, close } from '../assets'
+import { menu, close } from '../assets'
 
 const Navbar = () => {
 	const [active, setActive] = useState("")
@@ -11,7 +11,7 @@ const Navbar = () => {
 	return (
 		<nav className={`
 			${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20
-			${styles.bgPrimary}
+			${styles.bgPrimary} select-none
 		`}>
 			<div className="w-full flex items-center justify-between max-w-7xl mx-auto">
 				<Link
@@ -23,7 +23,7 @@ const Navbar = () => {
 					}}
 				>
 
-					<img src={"https://avatars.githubusercontent.com/u/88942532?v=4"} alt="logo" className="h-9 w-9 object-contain rounded-full" />
+					<img src={"https://media.licdn.com/dms/image/v2/D5603AQEn4f6FH45IiQ/profile-displayphoto-shrink_200_200/B56ZSXgSa6HoAY-/0/1737708611693?e=1743033600&v=beta&t=96O1xvSFCYttmcguVhXDZk1xpcw58PoIjgszkDngoLg"} alt="logo" className="h-9 w-9 object-contain rounded-full" />
 					<p className='text-white text-[18px] font-bold cursor-pointer flex'>Nivindu &nbsp;<span className='sm:block hidden'>Lakshitha</span></p>
 				</Link>
 				<ul className="list-none hidden sm:flex flex-row gap-10">

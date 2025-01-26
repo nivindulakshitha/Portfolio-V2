@@ -25,7 +25,6 @@ function App() {
 					)}
 				</AnimatePresence>
 
-				{/* Main Content */}
 				<div className="bg-hero bg-hero-pattern bg-cover bg-no-repeat bg-center">
 					<Navbar />
 					<Hero />
