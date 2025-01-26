@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { myProjects } from '../constants'
+import { useState } from 'react';
+import { projects } from '../constants'
 import { ComputersCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { motion } from "framer-motion";
@@ -8,8 +8,8 @@ import { styles } from '../styles';
 
 const Projects = () => {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0)
-    const projectsCount = myProjects.length;
-    const currentProject = myProjects[selectedProjectIndex];
+    const projectsCount = projects.length;
+    const currentProject = projects[selectedProjectIndex];
     const isMobile = window.matchMedia("(max-width: 500px)").matches;
 
     const handleNavigation = (direction) => {
@@ -69,7 +69,7 @@ const Projects = () => {
                             </div>
 
                             <a href={currentProject.href} target='_blank' rel='noreferrer' className='flex items-center cursor-pointer text-white-600 gap-2'>
-                                <p>Check Live Site</p>
+                                <p>Check on GitHub</p>
                                 <img src="/projects/arrow-up.png" alt="visit" className='w-3 h-3' />
                             </a>
                         </div>
@@ -87,7 +87,7 @@ const Projects = () => {
 
                     <div className="bg-primary rounded-lg h-96 md:h-full order-1 lg:order-2 flex">
                        <div className='w-full h-full pointer-events-none' />
-                        <ComputersCanvas project={myProjects[selectedProjectIndex]} />
+                        <ComputersCanvas project={projects[selectedProjectIndex]} />
                     </div>
                 </div >
             </section >
