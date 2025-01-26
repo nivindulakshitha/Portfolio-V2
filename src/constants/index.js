@@ -151,7 +151,7 @@ const experiences = [
 		company_name: "Bank of Ceylon",
 		icon: boc,
 		iconBg: "#383E56",
-		date: "Jan 2021 - Feb 2022",
+		date: "February 2021 - August 2021",
 		points: [],
 	},
 	{
@@ -159,7 +159,7 @@ const experiences = [
 		company_name: "Udabalawala College of Kurunegala",
 		icon: usv,
 		iconBg: "#383E56",
-		date: "Jan 2022 - Jan 2023",
+		date: "June 2018 - December 2020",
 		points: [],
 	},
 	{
@@ -167,7 +167,7 @@ const experiences = [
 		company_name: "Pimburuwellegama Collage of Kurunegala",
 		icon: pcc,
 		iconBg: "#383E56", // light - E6DEDD
-		date: "Jan 2023 - Present",
+		date: "January 2005 - December 2017",
 		points: [],
 	},
 ];
