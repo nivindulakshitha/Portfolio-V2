@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { styles } from '../styles'
 import { navLinks } from '../constants'
 import { menu, close } from '../assets'
@@ -7,6 +7,11 @@ import { menu, close } from '../assets'
 const Navbar = () => {
 	const [active, setActive] = useState("")
 	const [toggle, setToggle] = useState(false)
+	const location = useLocation()
+
+	useEffect(() => {
+		setActive(location.hash.slice(1))
+	}, [location])
 
 	return (
 		<nav className={`
@@ -30,7 +35,7 @@ const Navbar = () => {
 					{
 						navLinks.map(link => (
 							<li key={link.id}
-								className={`${active === link.id ? 'text-white' : 'text-secondary'} cursor-pointer hover:text-white text-[18px] font-medium`}
+								className={`${active === link.id ? 'text-white' : 'text-secondary'} whitespace-nowrap cursor-pointer hover:text-white text-[18px] font-medium`}
 								onClick={() => { setActive(link.id) }}
 							>
 								<a href={`#${link.id}`}>{link.title}</a>

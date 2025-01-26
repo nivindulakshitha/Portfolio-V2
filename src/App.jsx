@@ -30,9 +30,9 @@ function App() {
 					<Hero />
 				</div>
 				<About />
+				<Experience />
 				<Tech />
 				<Projects />
-				<Experience />
 				<div className="relative z-0">
 					<Contact />
 					<StarsCanvas />
