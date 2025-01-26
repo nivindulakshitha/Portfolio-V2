@@ -7,7 +7,7 @@ import { gsap } from 'gsap';
 
 const Computers = ({ project, props }) => {
 	const ROTATION_SPEED = 1;
-	const [texture, setTexture] = useState('/computer/project1.mp4')
+	const [texture, setTexture] = useState('/computer/contributors.mp4')
 	const groupRef = useRef();
 
 	const gltf = useGLTF('/computer/monitor.glb');
