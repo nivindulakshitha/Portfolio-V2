@@ -5,10 +5,7 @@ import {
 	web,
 	javascript,
 	typescript,
-	html,
-	css,
 	reactjs,
-	redux,
 	tailwind,
 	nodejs,
 	mongodb,
@@ -16,6 +13,8 @@ import {
 	figma,
 	docker,
 	threejs,
+	python,
+	gcp,
 	github,
 	usjp,
 	boc,
@@ -72,14 +71,6 @@ const services = [
 
 const technologies = [
 	{
-		name: "HTML 5",
-		icon: html,
-	},
-	{
-		name: "CSS 3",
-		icon: css,
-	},
-	{
 		name: "JavaScript",
 		icon: javascript,
 	},
@@ -90,10 +81,6 @@ const technologies = [
 	{
 		name: "React JS",
 		icon: reactjs,
-	},
-	{
-		name: "Redux Toolkit",
-		icon: redux,
 	},
 	{
 		name: "Tailwind CSS",
@@ -123,6 +110,33 @@ const technologies = [
 		name: "docker",
 		icon: docker,
 	},
+	{
+		name: "python",
+		icon: python,
+	},
+	{
+		name: "gcp",
+		icon: gcp,
+	}
+];
+
+const shorted_technologies = [
+	{
+		name: "Node JS",
+		icon: nodejs,
+	},
+	{
+		name: "MongoDB",
+		icon: mongodb,
+	},
+	{
+		name: "python",
+		icon: python,
+	},
+	{
+		name: "gcp",
+		icon: gcp,
+	}
 ];
 
 const experiences = [
@@ -139,7 +153,7 @@ const experiences = [
 		company_name: "GitHub",
 		icon: github,
 		iconBg: "#383E56",
-		date: "Augest 2021 - Current",
+		date: "August 2021 - Current",
 		points: [
 			"60+ open source projects contributed",
 			"130 stargazers earned",
@@ -352,4 +366,4 @@ const projects = [
 	},
 ];
 
-export { services, technologies, experiences, projects };
+export { services, technologies, experiences, projects, shorted_technologies };

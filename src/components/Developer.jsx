@@ -27,7 +27,7 @@ const Developer = ({ isContactVisible = false }) => {
                 shadows
                 gl={{ antialias: true, preserveDrawingBuffer: true, powerPreference: 'low-power', alpha: true }}
             >
-                <ambientLight intensity={2} />
+                <ambientLight intensity={2.5} />
                 <directionalLight
                     position={[5, 10, 5]}
                     intensity={0.5}
