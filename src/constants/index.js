@@ -31,8 +31,17 @@ export const navLinks = [
 		title: "About",
 	},
 	{
-		id: "work",
-		title: "Work",
+		id: "technoloies",
+		title: "Technologies",
+	},
+	{
+		id: "projects",
+		title: "Projects",
+	}
+	,
+	{
+		id: "milestones",
+		title: "Milestones",
 	},
 	{
 		id: "contact",
@@ -116,20 +125,25 @@ const technologies = [
 
 const experiences = [
 	{
+		title: "Undergraduate",
+		company_name: "Univevrity of Sri Jayewardenepura",
+		icon: starbucks,
+		iconBg: "#383E56",
+		date: "October 2021 - Current",
+		points: [],
+	},
+	{
 		title: "Open Source Contributor",
 		company_name: "GitHub",
 		icon: starbucks,
 		iconBg: "#383E56",
-		date: "March 2020 - Current",
-		points: [],
-	},
-	{
-		title: "Student",
-		company_name: "Univevrity of Sri Jayewardenepura",
-		icon: starbucks,
-		iconBg: "#383E56",
-		date: "March 2020 - Current",
-		points: [],
+		date: "Augest 2021 - Current",
+		points: [
+			"60+ open source projects contributed",
+			"70 stargazers earned",
+			"2500+ contributions",
+			"5 total issues created"
+		],
 	},
 	{
 		title: "Trainee",
@@ -140,16 +154,16 @@ const experiences = [
 		points: [],
 	},
 	{
-		title: "Web Developer",
-		company_name: "Shopify",
+		title: "Student",
+		company_name: "Udabalawala College of Kurunegala",
 		icon: shopify,
 		iconBg: "#383E56",
 		date: "Jan 2022 - Jan 2023",
 		points: [],
 	},
 	{
-		title: "Full stack Developer",
-		company_name: "Meta",
+		title: "Student",
+		company_name: "Pimburuwellegama Collage of Kurunegala",
 		icon: meta,
 		iconBg: "#E6DEDD",
 		date: "Jan 2023 - Present",
