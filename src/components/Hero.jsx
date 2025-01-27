@@ -3,8 +3,7 @@ import { styles } from '../styles';
 import Developer from './Developer';
 import { useEffect, useState } from 'react';
 
-const Hero = () => {
-	const [isContactVisible, setIsContactVisible] = useState(false);
+const Hero = ({ isContactVisible, setIsContactVisible }) => {
 	const [isMobile, setIsMobile] = useState(true);
 
 	useEffect(() => {
@@ -22,7 +21,7 @@ const Hero = () => {
 					setIsContactVisible(entry.isIntersecting);
 				});
 			},
-			{ threshold: 0.5 } // Trigger when 50% of the section is visible
+			{ threshold: 0.5 }
 		);
 
 		observer.observe(contactSection);
