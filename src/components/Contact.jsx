@@ -72,11 +72,26 @@ const Contact = () => {
 						<span className='text-white font-medium mb-4'>Your Message</span>
 						<textarea rows={7} value={form.message} name='message' onChange={handleChange} placeholder="What do you want to say?" className='bg-tertiary py-4 px-6 placeholder:text-secondary rounded-lg outline-none border-none font-medium'/>
 					</label>
-					<button type='submit' className='bg-tertiary py-3  px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'>
-						{
-							!loading ? "Send Message" : "Sending..."
-						}
-					</button>
+					<div className="flex gap-10 flex-row justify-between">
+						<button type='submit' className='bg-tertiary py-3  px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'>
+							{
+								!loading ? "Send Message" : "Sending..."
+							}
+						</button>
+						<div className="flex gap-8">
+							<a href="https://www.linkedin.com/in/nivindulakshitha" target="_blank">
+								<img src="src/assets/company/linkedin.svg" alt="LibkedIn" className="w-[40px] h-[40px] cursor-pointer p-[6px]" />
+							</a>
+
+							<a href="https://github.com/nivindulakshitha" target="_blank">
+								<img src="src/assets/tech/github.png" alt="GitHub" className="w-[40px] h-[40px] cursor-pointer" />
+							</a>
+
+							<a href="mailto:nivindulakshitha@gmail.com" target="_blank">
+								<img src="src/assets/company/email.svg" alt="Email" className="w-[40px] h-[40px] cursor-pointer p-[2px]" />
+							</a>
+						</div>
+					</div>
 				</form>
 			</motion.div>
 
