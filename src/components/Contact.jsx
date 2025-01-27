@@ -80,15 +80,15 @@ const Contact = () => {
 						</button>
 						<div className="flex gap-8 items-center">
 							<a href="https://www.linkedin.com/in/nivindulakshitha" target="_blank">
-								<img src="src/assets/company/linkedin.svg" alt="LibkedIn" className="w-[40px] h-[40px] cursor-pointer p-[6px]" />
+								<img src="./socials/linkedin.svg" alt="LibkedIn" className="w-[40px] h-[40px] cursor-pointer p-[6px]" />
 							</a>
 
 							<a href="https://github.com/nivindulakshitha" target="_blank">
-								<img src="src/assets/tech/github.png" alt="GitHub" className="w-[40px] h-[40px] cursor-pointer" />
+								<img src="./socials/github.png" alt="GitHub" className="w-[40px] h-[40px] cursor-pointer" />
 							</a>
 
 							<a href="mailto:nivindulakshitha@gmail.com" target="_blank">
-								<img src="src/assets/company/email.svg" alt="Email" className="w-[40px] h-[40px] cursor-pointer p-[2px]" />
+								<img src="./socials/email.svg" alt="Email" className="w-[40px] h-[40px] cursor-pointer p-[2px]" />
 							</a>
 						</div>
 					</div>
