@@ -27,8 +27,8 @@ const Projects = () => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={styles.sectionSubText}>I have learn a lot doing following</p>
-                <h2 className={styles.sectionHeadText}>Projects.</h2>
+                <p className={styles.sectionSubText}>I have learnt a lot completing following</p>
+                <h2 className={styles.sectionHeadText}>30+ Projects.</h2>
             </motion.div>
             <section className="c-space my-5">
                 <div className='grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full'>

@@ -146,7 +146,9 @@ const experiences = [
 		icon: usjp,
 		iconBg: "#383E56",
 		date: "October 2021 - Current",
-		points: [],
+		points: [
+			"Undergraduate in Information and Communication Technology honors degree",
+		],
 	},
 	{
 		title: "Open Source Contributor",
@@ -166,7 +168,9 @@ const experiences = [
 		icon: boc,
 		iconBg: "#383E56",
 		date: "February 2021 - August 2021",
-		points: [],
+		points: [
+			"06 months of training",
+		],
 	},
 	{
 		title: "Student",
@@ -174,15 +178,19 @@ const experiences = [
 		icon: usv,
 		iconBg: "#383E56",
 		date: "June 2018 - December 2020",
-		points: [],
+		points: [
+			"Passed G.C.E. Advanced Level Examination",
+		],
 	},
 	{
 		title: "Student",
-		company_name: "Pimburuwellegama Collage of Kurunegala",
+		company_name: "Pimburuwellegama College of Kurunegala",
 		icon: pcc,
 		iconBg: "#383E56", // light - E6DEDD
 		date: "January 2005 - December 2017",
-		points: [],
+		points: [
+			"Passed G.C.E. Ordinary Level Examination",
+		],
 	},
 ];
 
