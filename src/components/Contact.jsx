@@ -5,7 +5,6 @@ import { styles } from '../styles'
 import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
-import toast, { Toaster } from 'react-hot-toast';
 
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
@@ -30,15 +29,7 @@ const Contact = () => {
 		setLoading(true);
 
 		if (!form.name || !form.email || !form.message) {
-			toast.error("Please fill all the fields.", {
-				style: {
-					background: '#1d1836',
-					color: '#fff',
-					borderRadius: '10px',
-					border: '1px solid #915EFF'
-				},
-				icon: '⚠️'
-			});
+			alert('Please fill all the fields');
 			setLoading(false);
 			return;
 		}
@@ -54,23 +45,6 @@ const Contact = () => {
 				message: form.message
 			},
 			PUBLIC_KEY
-		);
-
-		toast.promise(
-			emailPromise,
-			{
-				loading: 'Sending message...',
-				success: 'Thank you. I will get back to you as soon as possible.',
-				error: 'Something went wrong! Try again.',
-			},
-			{
-				style: {
-					background: '#1d1836',
-					color: '#fff',
-					borderRadius: '10px',
-					border: '1px solid #915EFF'
-				},
-			}
 		);
 
 		emailPromise
@@ -91,7 +65,6 @@ const Contact = () => {
 
 	return (
 		<div id='contact' className="flex flex-col-reverse gap-10 xl:mt-12 xl:flex-row overflow-hidden">
-			<Toaster position="top-center" />
 			<motion.div
 				variants={slideIn('left', 'tween', 0.2, 1)}
 				className='flex-[0.75] bg-black-100 rounded-2xl p-8'
