@@ -229,13 +229,6 @@ const projects = [
 			boxShadow: '0px 0px 60px 0px #2F6DB54D',
 		},
 		spotlight: 'projects/lights/pink.png',
-		/* 
-		{
-				id: 1,
-				name: 'React.js',
-				path: '/projects/languages/react.svg',
-			},
-		 */
 		tags: [],
 		techs_url: 'https://skillicons.dev/icons?i=js,npm'
 	},
@@ -251,13 +244,6 @@ const projects = [
 			boxShadow: '0px 0px 60px 0px #2F6DB54D',
 		},
 		spotlight: 'projects/lights/green.png',
-		/* 
-		{
-				id: 1,
-				name: 'React.js',
-				path: '/projects/languages/react.svg',
-			},
-		 */
 		tags: [],
 		techs_url: 'https://skillicons.dev/icons?i=react,bootstrap,jquery'
 	},
@@ -273,13 +259,6 @@ const projects = [
 			boxShadow: '0px 0px 60px 0px #2F6DB54D',
 		},
 		spotlight: 'projects/lights/blue.png',
-		/* 
-		{
-				id: 1,
-				name: 'React.js',
-				path: '/projects/languages/react.svg',
-			},
-		 */
 		tags: [],
 		techs_url: 'https://skillicons.dev/icons?i=js,threejs,tailwindcss'
 	},
@@ -295,15 +274,83 @@ const projects = [
 			boxShadow: '0px 0px 60px 0px #2F6DB54D',
 		},
 		spotlight: 'projects/lights/blue.png',
-		/* 
-		{
-				id: 1,
-				name: 'React.js',
-				path: '/projects/languages/react.svg',
-			},
-		 */
 		tags: [],
 		techs_url: 'https://skillicons.dev/icons?i=css,postman'
+	},
+	{
+		title: 'Hutch mobile app redesign concept',
+		desc: 'Using Figma, I aimed to create a modern, user-friendly interface that enhances the overall experience while maintaining a clean and vibrant aesthetic.',
+		href: 'https://www.figma.com/proto/qgyxGcCEGKqGGx03i0ZG3b/Hutch-Redesigned?node-id=1-3&t=t5yWMrudLZuSTrML-1',
+		texture: '/computer/hutch-redesign.mp4',
+		logo: 'https://skillicons.dev/icons?i=figma',
+		logoStyle: {
+			backgroundColor: '#13202F',
+			border: '0.2px solid #17293E',
+			boxShadow: '0px 0px 60px 0px #2F6DB54D',
+		},
+		spotlight: 'projects/lights/pink.png',
+		tags: [],
+		techs_url: ''
+	},
+	{
+		title: 'Sri Lanka Flag Animation',
+		desc: 'a tribute to the vibrant spirit of Sri Lanka! Using only HTML5 and CSS3, this project brings the a flag to life with smooth, dynamic animations—no JavaScript or external libraries involved!',
+		href: 'https://github.com/nivindulakshitha/Flag-Animation',
+		texture: '/computer/flag-animation.mp4',
+		logo: 'https://skillicons.dev/icons?i=css',
+		logoStyle: {
+			backgroundColor: '#13202F',
+			border: '0.2px solid #17293E',
+			boxShadow: '0px 0px 60px 0px #2F6DB54D',
+		},
+		spotlight: 'projects/lights/pink.png',
+		tags: [],
+		techs_url: 'https://skillicons.dev/icons?i=html'
+	},
+	{
+		title: 'Netflix-UI project',
+		desc: 'I’ve cloned the Netflix landing page using HTML5 and CSS3. This project is a great example of creating modern web interfaces with a clean, visually appealing design.',
+		href: 'https://github.com/nivindulakshitha/Netflix-UI',
+		texture: '/computer/netflix-ui.mp4',
+		logo: 'https://skillicons.dev/icons?i=css',
+		logoStyle: {
+			backgroundColor: '#13202F',
+			border: '0.2px solid #17293E',
+			boxShadow: '0px 0px 60px 0px #2F6DB54D',
+		},
+		spotlight: 'projects/lights/pink.png',
+		tags: [],
+		techs_url: 'https://skillicons.dev/icons?i=html'
+	},
+	{
+		title: 'Audi-UI, a front-end project replicating the sleek landing page of the Audi Sri Lanka website!',
+		desc: "Built using HTML5 and CSS3, this project showcases attention to design detail and responsive web development skills.It's a visually appealing and lightweight clone, perfect for exploring UI design techniques.",
+		href: 'https://github.com/nivindulakshitha/Audi-UI',
+		texture: '/computer/audi-ui.mp4',
+		logo: 'https://skillicons.dev/icons?i=css',
+		logoStyle: {
+			backgroundColor: '#13202F',
+			border: '0.2px solid #17293E',
+			boxShadow: '0px 0px 60px 0px #2F6DB54D',
+		},
+		spotlight: 'projects/lights/blue.png',
+		tags: [],
+		techs_url: 'https://skillicons.dev/icons?i=html'
+	},
+	{
+		title: 'Spotify-UI, my project inspired by the sleek and iconic Spotify web player interface! ',
+		desc: "Crafted entirely with HTML5 and CSS3, this project captures the essence of modern web design. While it’s not yet responsive, it’s a bold step towards mastering UI replication and front-end development. ",
+		href: 'https://github.com/nivindulakshitha/Spotify-UI',
+		texture: '/computer/spotify-ui.mp4',
+		logo: 'https://skillicons.dev/icons?i=css',
+		logoStyle: {
+			backgroundColor: '#13202F',
+			border: '0.2px solid #17293E',
+			boxShadow: '0px 0px 60px 0px #2F6DB54D',
+		},
+		spotlight: 'projects/lights/green.png',
+		tags: [],
+		techs_url: 'https://skillicons.dev/icons?i=html'
 	}
 ];
 

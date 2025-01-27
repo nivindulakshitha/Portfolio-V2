@@ -67,7 +67,9 @@ const Projects = () => {
                                     <img src={currentProject.logo} alt="logo" />
                                 )
                             }
-                            <img src={currentProject.techs_url} alt="tech stack" />
+                            {
+                                currentProject.techs_url  && <img src={currentProject.techs_url} alt="tech stack" />
+                            }
                             <div className="flex items-center gap-3">
                                 {currentProject.tags.map((tag, index) => {
                                     return (
@@ -78,7 +80,7 @@ const Projects = () => {
                                 })}
                             </div>
                             <a href={currentProject.href} target='_blank' rel='noreferrer' className='flex items-center cursor-pointer text-white-600 gap-2'>
-                                <p>Check on GitHub</p>
+                                <p>Check the source</p>
                                 <img src="/projects/arrow-up.png" alt="visit" className='w-3 h-3' />
                             </a>
                         </div>
