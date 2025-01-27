@@ -3,11 +3,10 @@ import { About, Contact, Experience, Hero, Navbar, Tech, StarsCanvas, Projects, 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import TipsAssistant from './components/Tips'
-/* import Draggable from 'react-draggable'; */
 
 function App() {
 	const [doneLoading, setDoneLoading] = useState(false)
-	const [isContactVisible, setIsContactVisible] = useState(false); 
+	const [isContactVisible, setIsContactVisible] = useState(false);
 
 	return (
 		<BrowserRouter>
@@ -32,11 +31,6 @@ function App() {
 				</div>
 				<About />
 				<TipsAssistant isContactVisible={isContactVisible} />
-				{/* <Draggable>
-					<div style={{ position: 'absolute', zIndex: 1000 }}>
-						<TipsAssistant isContactVisible={isContactVisible} />
-					</div>
-				</Draggable> */}
 				<Experience />
 				<Tech />
 				<Projects />

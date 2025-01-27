@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const TipsAssistant = ({ isContactVisible }) => {
 	const [freezed, setFreezed] = useState(false);
@@ -16,7 +17,6 @@ const TipsAssistant = ({ isContactVisible }) => {
 		"Feel free to interact with the 3D objects whenever possible!"
 	];
 
-
 	const [currentTipIndex, setCurrentTipIndex] = useState(0);
 
 	useEffect(() => {
@@ -29,8 +29,16 @@ const TipsAssistant = ({ isContactVisible }) => {
 	}, [tips.length, freezed]);
 
 	return (
-		<div className="fixed bottom-6 right-6 z-10 min-h-[60px] flex flex-row-reverse items-center shadow-lg rounded-lg p-4 max-w-xs">
-			<div className="relative w-12 h-12 rounded-full overflow-hidden ml-3">
+		<motion.div
+			className="fixed bottom-6 right-6 z-10 min-h-[60px] flex flex-row-reverse items-center shadow-lg rounded-lg p-4 max-w-xs"
+			drag="y"
+			dragConstraints={{ top: -200, bottom: window.innerHeight - 300}}
+			dragElastic={0.2}
+			dragMomentum={false}
+			whileDrag={{ scale: 1.02 }}
+			transition={{ type: "spring", stiffness: 100, damping: 25 }}
+		>
+			<div className="relative w-12 h-12 rounded-full overflow-hidden ml-3 cursor-move">
 				<img
 					src="/models/nivindulakshitha.png"
 					alt="Assistant"
@@ -38,20 +46,25 @@ const TipsAssistant = ({ isContactVisible }) => {
 				/>
 			</div>
 
-			{/* Tip Content */}
 			<div className="flex-1 bg-primary rounded-lg p-2 bg-opacity-90">
 				<p className="text-white text-sm font-medium">
 					{freezed ? (
 						<>
-							You have reached the end of my portfolio. I am feeling confident and want to see how much? 
-							<a onClick={() => {window.scrollTo(0, 0); setFreezed(false)}} className="cursor-pointer">
+							You have reached the end of my portfolio. I am feeling confident and want to see how much?
+							<a
+								onClick={() => {
+									window.scrollTo(0, 0);
+									setFreezed(false);
+								}}
+								className="cursor-pointer"
+							>
 								<span className="text-[#915EFF]"> Click here! </span>
 							</a>
 						</>
-					): tips[currentTipIndex] }
+					) : tips[currentTipIndex]}
 				</p>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 
