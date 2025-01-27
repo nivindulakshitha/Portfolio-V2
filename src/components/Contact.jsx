@@ -72,7 +72,7 @@ const Contact = () => {
 						<span className='text-white font-medium mb-4'>Your Message</span>
 						<textarea rows={7} value={form.message} name='message' onChange={handleChange} placeholder="What do you want to say?" className='bg-tertiary py-4 px-6 placeholder:text-secondary rounded-lg outline-none border-none font-medium'/>
 					</label>
-					<div className="flex gap-10 flex-row justify-between items-center flex-flow">
+					<div className="flex gap-10 flex-row justify-between items-center flex-wrap">
 						<button type='submit' className='bg-tertiary py-3  px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'>
 							{
 								!loading ? "Send Message" : "Sending..."
