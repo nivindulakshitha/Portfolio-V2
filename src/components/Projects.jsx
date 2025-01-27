@@ -32,13 +32,13 @@ const Projects = () => {
             </motion.div>
             <section className="c-space my-5">
                 <div className='grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full'>
-                    <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 order-2 lg:order-1">
+                    <div className={`flex flex-col gap-5 justify-between relative sm:p-10 py-10 px-5 ${isMobile ? 'order-1' : 'order-2 lg:order-1'}  min-h-[400px]`}>
                         <div className='absolute top-0 right-0'>
-                            <img src={currentProject.spotlight ? currentProject.spotlight : "projects/lights/spotlight2.png"} alt="spotlight" className='w-full h-96 max-h-[300px] object-cover rounded-xl' />
+                            <img src={currentProject.spotlight ? currentProject.spotlight : "projects/lights/spotlight2.png"} alt="spotlight" className='w-full h-96 max-h-[250px] object-cover rounded-xl' />
                         </div>
 
                         {
-                            currentProject.logo && (
+                            !isMobile && currentProject.logo && (
                                 <div className='p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg' style={currentProject.logoStyle}>
                                     <img src={currentProject.logo} alt="logo" className='w-10 h-10 shadow-sm' />
                                 </div>
@@ -62,6 +62,11 @@ const Projects = () => {
                         </div>
 
                         <div className="flex items-center jsutify-between flex-wrap gap-5">
+                            {
+                                isMobile && currentProject.logo && (
+                                    <img src={currentProject.logo} alt="logo" />
+                                )
+                            }
                             <img src={currentProject.techs_url} alt="tech stack" />
                             <div className="flex items-center gap-3">
                                 {currentProject.tags.map((tag, index) => {
@@ -89,7 +94,7 @@ const Projects = () => {
                     </div>
 
 
-                    <div className="bg-primary rounded-lg h-96 md:h-full order-1 lg:order-2 flex">
+                    <div className={`bg-primary rounded-lg h-96 md:h-full ${isMobile ? 'order-2' : 'order-1 lg:order-2'} flex`}>
                        <div className='w-full h-full pointer-events-none' />
                         <ComputersCanvas project={projects[selectedProjectIndex]} />
                     </div>
