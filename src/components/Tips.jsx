@@ -38,7 +38,7 @@ const TipsAssistant = ({ isContactVisible }) => {
 			whileDrag={{ scale: 1.02 }}
 			transition={{ type: "spring", stiffness: 100, damping: 25 }}
 		>
-			<div className="relative w-12 h-12 rounded-full overflow-hidden ml-3 cursor-move">
+			<div className="relative w-12 h-12 rounded-full overflow-hidden ml-3 cursor-move bg-primary bg-opacity-90">
 				<img
 					src="/models/nivindulakshitha.png"
 					alt="Assistant"
