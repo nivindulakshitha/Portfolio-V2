@@ -30,13 +30,13 @@ const TipsAssistant = ({ isContactVisible }) => {
 
 	return (
 		<motion.div
-			className="fixed bottom-6 right-6 z-10 min-h-[60px] flex flex-row-reverse items-center shadow-lg rounded-lg p-4 max-w-xs"
+			className="fixed bottom-6 right-6 z-10 min-h-[60px] flex flex-row-reverse items-center rounded-lg p-4 max-w-xs"
 			drag="y"
 			dragConstraints={{ top: -200, bottom: window.innerHeight - 300}}
-			dragElastic={0.2}
+			dragElastic={0.3}
 			dragMomentum={false}
-			whileDrag={{ scale: 1.02 }}
-			transition={{ type: "spring", stiffness: 100, damping: 25 }}
+			whileDrag={{ scale: 1.03 }}
+			transition={{ type: "spring", stiffness: 100, damping: 25, duration: 0.2 }}
 		>
 			<div className="relative w-12 h-12 rounded-full overflow-hidden ml-3 cursor-move bg-primary bg-opacity-90">
 				<img
