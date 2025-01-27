@@ -5,7 +5,7 @@ import CanvasLoader from '../Loader';
 import { Environment } from '@react-three/drei';
 import { gsap } from 'gsap';
 
-const Computers = ({ project, props }) => {
+const Computers = ({ project, isMobile, props }) => {
 	const ROTATION_SPEED = 1;
 	const [texture, setTexture] = useState('/computer/contributors.mp4')
 	const groupRef = useRef();
@@ -55,7 +55,7 @@ const Computers = ({ project, props }) => {
 	}, [project])
 
 	return nodes && materials ? (
-		<group ref={groupRef} {...props} position-y={0.5} dispose={null}>
+		<group ref={groupRef} {...props} position-y={isMobile ? 2 : 0.5} dispose={null}>
 			<group scale={0.1}>
 				<mesh geometry={nodes.Screen_Display_0.geometry} scale={100}>
 					<meshStandardMaterial
@@ -113,7 +113,7 @@ const ComputerCanvas = ({project}) => {
 				<OrbitControls
 					enabled={false} // Disable user interaction
 				/>
-				<Computers project={project} />
+				<Computers project={project} isMobile={isMobile} />
 			</Suspense>
 			<Preload all />
 		</Canvas>
