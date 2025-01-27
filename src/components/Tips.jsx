@@ -1,27 +1,35 @@
 import { useState, useEffect } from "react";
-import  {motion} from "framer-motion";
 
-const TipsAssistant = () => {
+const TipsAssistant = ({ isContactVisible }) => {
+	const [freezed, setFreezed] = useState(false);
+
+	useEffect(() => {
+		setFreezed(isContactVisible);
+	}, [isContactVisible]);
+
 	const tips = [
-		"Hi! Welcome to my portfolio. Explore my work using the menu above.",
-		"Check out the projects section to see my latest work!",
-		"You can contact me through the Contact section below.",
-		"Tip: My portfolio is fully responsive. Try resizing the window!",
+		"Welcome to my portfolio! Explore my portfolio using the menu above.",
+		"Check out the Projects section to see my latest work.",
+		"For the best experience, view this portfolio on a laptop or desktop computer.",
+		"If the 3D models disappear suddenly, try refreshing the page.",
+		"You can contact me through the Contact section at the bottom of the page.",
+		"Feel free to interact with the 3D objects whenever possible!"
 	];
+
 
 	const [currentTipIndex, setCurrentTipIndex] = useState(0);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
+			if (freezed) return;
 			setCurrentTipIndex((prevIndex) => (prevIndex + 1) % tips.length);
 		}, 10000);
 
 		return () => clearInterval(interval);
-	}, [tips.length]);
+	}, [tips.length, freezed]);
 
 	return (
-		<div className="fixed bottom-6 right-6 z-50 min-h-[60px] flex flex-row-reverse items-center shadow-lg rounded-lg p-4 max-w-xs">
-			{/* Avatar with ripple animation */}
+		<div className="fixed bottom-6 right-6 z-10 min-h-[60px] flex flex-row-reverse items-center shadow-lg rounded-lg p-4 max-w-xs">
 			<div className="relative w-12 h-12 rounded-full overflow-hidden ml-3">
 				<img
 					src="/models/nivindulakshitha.png"
@@ -32,22 +40,15 @@ const TipsAssistant = () => {
 
 			{/* Tip Content */}
 			<div className="flex-1 bg-primary rounded-lg p-2 bg-opacity-90">
-				<motion.div
-					className="absolute inset-0 rounded-full bg-white bg-opacity-10"
-					initial={{ scale: 1, opacity: 0.5 }}
-					animate={{
-						scale: [1, 1.1, 1],
-						opacity: [0.5, 0],
-					}}
-					transition={{
-						duration: 3.5,
-						ease: "easeOut",
-						repeat: Infinity,
-						repeatType: "loop",
-					}}
-				/>
 				<p className="text-white text-sm font-medium">
-					{tips[currentTipIndex]}
+					{freezed ? (
+						<>
+							You have reached the end of my portfolio. I am feeling confident and want to see how much? 
+							<a onClick={() => {window.scrollTo(0, 0); setFreezed(false)}} className="cursor-pointer">
+								<span className="text-[#915EFF]"> Click here! </span>
+							</a>
+						</>
+					): tips[currentTipIndex] }
 				</p>
 			</div>
 		</div>
