@@ -11,6 +11,7 @@ const TipsAssistant = ({ isContactVisible }) => {
 	const tips = [
 		"Welcome to my portfolio! Explore my portfolio using the menu above.",
 		"Check out the Projects section to see my latest work.",
+		"3D models are limited to mobile devices due to performance issues. Sorry!",
 		"For the best experience, view this portfolio on a laptop or desktop computer.",
 		"If the 3D models disappear suddenly, try refreshing the page.",
 		"You can have my CV in the navigation menu. Just check it out!",
@@ -24,7 +25,7 @@ const TipsAssistant = ({ isContactVisible }) => {
 		const interval = setInterval(() => {
 			if (freezed) return;
 			setCurrentTipIndex((prevIndex) => (prevIndex + 1) % tips.length);
-		}, 10000);
+		}, 5000);
 
 		return () => clearInterval(interval);
 	}, [tips.length, freezed]);
