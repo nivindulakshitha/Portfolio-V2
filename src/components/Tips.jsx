@@ -13,6 +13,7 @@ const TipsAssistant = ({ isContactVisible }) => {
 		"Check out the Projects section to see my latest work.",
 		"For the best experience, view this portfolio on a laptop or desktop computer.",
 		"If the 3D models disappear suddenly, try refreshing the page.",
+		"You can have my CV in the navigation menu. Just check it out!",
 		"You can contact me through the Contact section at the bottom of the page.",
 		"Feel free to interact with the 3D objects whenever possible!"
 	];
@@ -30,7 +31,7 @@ const TipsAssistant = ({ isContactVisible }) => {
 
 	return (
 		<motion.div
-			className="fixed bottom-6 right-6 z-10 min-h-[60px] flex flex-row-reverse items-center rounded-lg p-4 max-w-xs"
+			className="fixed bottom-6 right-6 z-10 min-h-[60px] flex flex-row-reverse items-center rounded-lg p-4 max-w-xs cursor-pointer"
 			drag="y"
 			dragConstraints={{ top: -200, bottom: window.innerHeight - 300}}
 			dragElastic={0.3}
@@ -38,7 +39,7 @@ const TipsAssistant = ({ isContactVisible }) => {
 			whileDrag={{ scale: 1.03 }}
 			transition={{ type: "spring", stiffness: 100, damping: 25, duration: 0.2 }}
 		>
-			<div className="relative w-12 h-12 rounded-full overflow-hidden ml-3 cursor-move bg-primary bg-opacity-90">
+			<div className="relative w-12 h-12 rounded-full overflow-hidden ml-3 bg-primary bg-opacity-90 cursor-default">
 				<img
 					src="/models/nivindulakshitha.png"
 					alt="Assistant"
