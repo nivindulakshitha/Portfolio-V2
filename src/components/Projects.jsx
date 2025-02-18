@@ -32,7 +32,7 @@ const Projects = () => {
             </motion.div>
             <section className="c-space my-5">
                 <div className='grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full'>
-                    <div className={`flex flex-col gap-5 justify-between relative sm:p-10 py-10 px-5 ${isMobile ? 'order-1' : 'order-2 lg:order-1'}  min-h-[400px]`}>
+                    <div className={`flex flex-col gap-5 justify-between relative sm:p-10 py-10 px-5 ${isMobile ? 'order-1' : 'order-2 lg:order-1'}  h-[562px]`}>
                         <div className='absolute top-0 right-0'>
                             <img src={currentProject.spotlight ? currentProject.spotlight : "projects/lights/spotlight2.png"} alt="spotlight" className='w-full h-96 max-h-[250px] object-cover rounded-xl' />
                         </div>
