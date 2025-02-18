@@ -202,13 +202,13 @@ const projects = [
 		"texture": "/computer/horizon.mp4",
 		"logo": "https://skillicons.dev/icons?i=react",
 		"logoStyle": {
-			"backgroundColor": "#0A0A0A",
-			"border": "0.2px solid #1E1E1E",
-			"boxShadow": "0px 0px 60px 0px #4A90E2"
+			backgroundColor: '#13202F',
+			border: '0.2px solid #17293E',
+			boxShadow: '0px 0px 60px 0px #2F6DB54D',
 		},
 		"spotlight": "projects/lights/blue.png",
 		"tags": ["FinTech", "SaaS", "Banking", "Transactions"],
-		"techs_url": "https://skillicons.dev/icons?i=nextjs,ts,tailwind,appwrite,react,tailwind"
+		"techs_url": "https://skillicons.dev/icons?i=nextjs,ts,appwrite,tailwind"
 	},
 	{
 		title: 'Readme API - Show your top 10 collaborators',
