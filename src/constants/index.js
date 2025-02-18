@@ -196,6 +196,21 @@ const experiences = [
 
 const projects = [
 	{
+		"title": "Horizon – A Next.js-powered financial SaaS platform!",
+		"desc": "Built with Next.js, Horizon enables users to connect multiple bank accounts, track real-time transactions, transfer funds securely, and manage their finances efficiently.",
+		"href": "https://github.com/nivindulakshitha/Horizon",
+		"texture": "/computer/horizon.mp4",
+		"logo": "https://skillicons.dev/icons?i=react",
+		"logoStyle": {
+			"backgroundColor": "#0A0A0A",
+			"border": "0.2px solid #1E1E1E",
+			"boxShadow": "0px 0px 60px 0px #4A90E2"
+		},
+		"spotlight": "projects/lights/blue.png",
+		"tags": ["FinTech", "SaaS", "Banking", "Transactions"],
+		"techs_url": "https://skillicons.dev/icons?i=nextjs,ts,tailwind,appwrite,react,tailwind"
+	},
+	{
 		title: 'Readme API - Show your top 10 collaborators',
 		desc: 'Developed a customizable API to generate contributor images for GitHub profile README files, showcasing the top 10 contributors in an engaging way.',
 		href: 'https://github.com/nivindulakshitha/My-Contributors',
