@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useGLTF, useFBX, useAnimations } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
+import { modelVersionName } from '../../src/constants';
 
 const Model = ({ gotCatch, isMobile, ...props }) => {
     const modelGroup = useRef();
@@ -17,7 +18,7 @@ const Model = ({ gotCatch, isMobile, ...props }) => {
         });
     };
 
-    const { scene, animations: gltfAnimations } = useGLTF('/models/nivindulakshithav2.glb');
+    const { scene, animations: gltfAnimations } = useGLTF(`/models/${modelVersionName}.glb`);
     const clonedScene = useMemo(() => SkeletonUtils.clone(scene), [scene]);
 
     useEffect(() => {

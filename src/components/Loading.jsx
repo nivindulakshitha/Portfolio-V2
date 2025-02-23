@@ -1,6 +1,7 @@
 import { useProgress } from '@react-three/drei'
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { modelVersionName } from '../constants'
 
 const Loading = ({ setDoneLoading }) => {
 	const { progress } = useProgress()
@@ -106,7 +107,7 @@ const Loading = ({ setDoneLoading }) => {
 			</div>
 			<motion.img
 				className="bottom-0 right-0 h-auto w-[555px] absolute max-h-[80%] max-w-[80%] object-contain hidden md:block z-0"
-				src="./models/nivindulakshithav2.png"
+				src={`./models/${modelVersionName}.png`}
 				alt="model"
 				variants={imageVariants}
 			/>
