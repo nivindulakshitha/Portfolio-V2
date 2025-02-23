@@ -17,7 +17,7 @@ const Model = ({ gotCatch, isMobile, ...props }) => {
         });
     };
 
-    const { scene, animations: gltfAnimations } = useGLTF('/models/nivindulakshitha.glb');
+    const { scene, animations: gltfAnimations } = useGLTF('/models/nivindulakshithav2.glb');
     const clonedScene = useMemo(() => SkeletonUtils.clone(scene), [scene]);
 
     useEffect(() => {
