@@ -106,7 +106,7 @@ const Loading = ({ setDoneLoading }) => {
 			</div>
 			<motion.img
 				className="bottom-0 right-0 h-auto w-[555px] absolute max-h-[80%] max-w-[80%] object-contain hidden md:block z-0"
-				src="./models/nivindulakshitha.png"
+				src="./models/nivindulakshithav2.png"
 				alt="model"
 				variants={imageVariants}
 			/>
