@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { modelVersionName } from "../constants";
 
 const TipsAssistant = ({ isContactVisible }) => {
 	const [freezed, setFreezed] = useState(false);
@@ -42,7 +43,7 @@ const TipsAssistant = ({ isContactVisible }) => {
 		>
 			<div className="relative w-12 h-12 rounded-full overflow-hidden ml-3 bg-primary bg-opacity-90 cursor-default">
 				<img
-					src="/models/nivindulakshitha.png"
+					src={`/models/${modelVersionName}.png`}
 					alt="Assistant"
 					className="relative z-10 w-full h-[210%] object-cover rounded-full"
 				/>

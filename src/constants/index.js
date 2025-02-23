@@ -22,6 +22,8 @@ import {
 	pcc
 } from "../assets";
 
+export const modelVersionName = "nivindulakshithav2";
+
 export const navLinks = [
 	{
 		id: "about",
