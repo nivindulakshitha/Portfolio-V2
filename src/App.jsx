@@ -3,6 +3,7 @@ import { About, Contact, Experience, Hero, Navbar, Tech, StarsCanvas, Projects, 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import TipsAssistant from './components/Tips'
+import { showLoadingScreen } from './constants'
 
 function App() {
 	const [doneLoading, setDoneLoading] = useState(false)
@@ -12,7 +13,7 @@ function App() {
 		<BrowserRouter>
 			<div className="relative z-0 bg-primary select-none">
 				<AnimatePresence>
-					{!doneLoading && (
+					{showLoadingScreen && !doneLoading && (
 						<motion.div
 							className="bg-hero bg-primary bg-cover bg-no-repeat bg-center z-50 fixed w-screen h-screen"
 							initial={{ opacity: 1 }}

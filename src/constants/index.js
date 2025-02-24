@@ -23,6 +23,7 @@ import {
 } from "../assets";
 
 export const modelVersionName = "nivindulakshithav2";
+export const showLoadingScreen = false;
 
 export const navLinks = [
 	{
