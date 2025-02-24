@@ -22,7 +22,8 @@ import {
 	pcc
 } from "../assets";
 
-export const modelVersionName = "nivindulakshithav2";
+export const modelVersionName = "nivindulakshitha";
+export const showLoadingScreen = false;
 
 export const navLinks = [
 	{
