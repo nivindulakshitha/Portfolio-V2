@@ -149,7 +149,7 @@ const experiences = [
 		title: "Intern Software Engineer",
 		company_name: "icieos pvt ltd",
 		icon: icieos,
-		iconBg: "#383E56",
+		iconBg: "#E6DEDD",
 		date: "March 2025 - Current",
 		points: [
 			"06 months of internship as a software engineer developing next.js based web applications",
