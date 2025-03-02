@@ -23,6 +23,7 @@ import usv from "./company/usv.png";
 import pcc from "./company/pcc.png";
 import python from "./tech/python.svg";
 import gcp from "./tech/gcp.svg";
+import icieos from "./tech/icieos.png";
 
 
 export {
@@ -49,5 +50,6 @@ export {
   usjp,
   boc,
   usv,
-  pcc
+  pcc,
+  icieos
 };

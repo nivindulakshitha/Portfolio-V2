@@ -19,10 +19,12 @@ import {
 	usjp,
 	boc,
 	usv,
-	pcc
+	pcc,
+	icieos
 } from "../assets";
 
 export const modelVersionName = "nivindulakshitha";
+
 export const showLoadingScreen = false;
 
 export const navLinks = [
@@ -143,6 +145,16 @@ const shorted_technologies = [
 ];
 
 const experiences = [
+	{
+		title: "Intern Software Engineer",
+		company_name: "icieos pvt ltd",
+		icon: icieos,
+		iconBg: "#383E56",
+		date: "March 2025 - Current",
+		points: [
+			"06 months of internship as a software engineer developing next.js based web applications",
+		]
+	},
 	{
 		title: "Undergraduate",
 		company_name: "Univevrity of Sri Jayewardenepura",
