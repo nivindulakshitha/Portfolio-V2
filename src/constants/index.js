@@ -147,7 +147,7 @@ const shorted_technologies = [
 const experiences = [
 	{
 		title: "Intern Software Engineer",
-		company_name: "icieos PVT LDT",
+		company_name: "ICIEOS Pvt Ltd.",
 		icon: icieos,
 		iconBg: "#E6DEDD",
 		date: "March 2025 - Current",
