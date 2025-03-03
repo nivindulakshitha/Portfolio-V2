@@ -1,7 +1,7 @@
 {
   "name": "portfolio-v2",
   "private": true,
-  "version": "3.9.15",
+  "version": "3.9.16",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
