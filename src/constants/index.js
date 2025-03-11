@@ -145,7 +145,7 @@ const shorted_technologies = [
 ];
 
 const experiences = [
-	{
+	/*{
 		title: "Intern Software Engineer",
 		company_name: "ICIEOS Pvt Ltd.",
 		icon: icieos,
@@ -154,7 +154,7 @@ const experiences = [
 		points: [
 			"06 months of internship as a software engineer developing next.js based web applications",
 		]
-	},
+	},*/
 	{
 		title: "Undergraduate",
 		company_name: "Univevrity of Sri Jayewardenepura",
