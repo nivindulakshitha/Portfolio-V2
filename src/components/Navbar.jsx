@@ -34,7 +34,7 @@ const Navbar = () => {
 					}}
 				>
 
-					<img src={"https://media.licdn.com/dms/image/v2/D5603AQEn4f6FH45IiQ/profile-displayphoto-shrink_200_200/B56ZSXgSa6HoAY-/0/1737708611693?e=2147483647&v=beta&t=icYafkK-aFL9xGTHb7ml3mQsh3UeHSjgqxqU0l1Ms5c"} alt="logo" className="h-9 w-9 object-contain rounded-full" />
+					<img src={"https://media.licdn.com/dms/image/v2/D5603AQFNuoSfm_hJdA/profile-displayphoto-shrink_800_800/B56ZY94y_AGoAc-/0/1744795021738?e=1750291200&v=beta&t=f-YPON3Oa13H5OzE5xC0XJXEeQl9HQ8PUfLgpZRF2oE"} alt="logo" className="h-9 w-9 object-contain rounded-full" />
 					<p className='text-white text-[18px] font-bold cursor-pointer flex'>Nivindu &nbsp;<span className='sm:block hidden'>Lakshitha</span></p>
 				</Link>
 				<ul className="list-none hidden lg:flex flex-row gap-10">
