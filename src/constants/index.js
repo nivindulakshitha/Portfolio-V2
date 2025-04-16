@@ -43,7 +43,7 @@ export const navLinks = [
 	{
 		id: "projects",
 		title: "Projects",
-	},	
+	},
 	{
 		id: "contact",
 		title: "Contact",
@@ -210,6 +210,21 @@ const experiences = [
 ];
 
 const projects = [
+	{
+		"title": "Build and deploy a subscription tracking backend server",
+		"desc": "Skip the basic CRUD - this Backend is all about building a production-ready Subscription Management System with real users, real money, and real business logic. JWT authentication, database modeling, API architecture, security, automated workflows, and much more!",
+		"href": "https://github.com/nivindulakshitha/Subscription-Tracker",
+		"texture": "/computer/subscription.mp4",
+		"logo": "https://skillicons.dev/icons?i=express",
+		"logoStyle": {
+			backgroundColor: '#13202F',
+			border: '0.2px solid #17293E',
+			boxShadow: '0px 0px 60px 0px #2F6DB54D',
+		},
+		"spotlight": "projects/lights/blue.png",
+		"tags": ["Subscription", "ExpressApp", "MongoDB"],
+		"techs_url": "https://skillicons.dev/icons?i=nodejs,express,mongodb"
+	},
 	{
 		"title": "Horizon – A Next.js-powered financial SaaS platform!",
 		"desc": "Built with Next.js, Horizon enables users to connect multiple bank accounts, track real-time transactions, transfer funds securely, and manage their finances efficiently.",
