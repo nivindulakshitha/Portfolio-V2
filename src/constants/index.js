@@ -157,12 +157,12 @@ const experiences = [
 	},
 	{
 		title: "Undergraduate",
-		company_name: "Univevrity of Sri Jayewardenepura",
+		company_name: "University of Sri Jayewardenepura",
 		icon: usjp,
 		iconBg: "#383E56",
 		date: "October 2021 - Current",
 		points: [
-			"Undergraduate in Information and Communication Technology honors degree",
+			"Undergraduate in Information and Communication Technology honours degree",
 		],
 	},
 	{
